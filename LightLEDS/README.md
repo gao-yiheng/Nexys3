@@ -1,4 +1,4 @@
-PicoBlaze_LED
+# PicoBlaze_LED
 Get started with PicoBlaze running on Xilinx Spartan-6 (Nexys3 FPGA board) to light LEDs
 
 ===============================================================================

@@ -1,2 +1,2 @@
-# Nexys3
-Verilog code that could run on Nexys3 (Spartan-6)
+# Nexys3 (Spartan-6) with PicoBlaze
+

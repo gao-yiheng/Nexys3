@@ -1,4 +1,4 @@
-# Projects with Verilog and PicoBlaze run on Nexys3 (Spartan-6) 
+# Projects with Verilog and PicoBlaze run on Nexys3 (Spartan6) 
 
 LightLEDs ---> light 8-bit LEDs in Nexys3 with PicoBlaze
 

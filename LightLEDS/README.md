@@ -5,8 +5,7 @@ Get started with PicoBlaze running on Xilinx Spartan-6 (Nexys3 FPGA board) to li
 
 kcpsm6.v ---> source code implemented PicoBlaze, Xilinx provide 
 
-
-led_prog.v -> instruction memory that store instruction PicoBlaze need to execute led_top.v --> top module for the project
+led_prog.v -> instruction memory that store instruction PicoBlaze need to execute
 
 led_top.v --> top module for the project
 

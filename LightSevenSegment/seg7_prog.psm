@@ -1,0 +1,25 @@
+; Read input from port 1 which is defined as switch
+; Seperate it into 2 4-bit data
+; Add 2 numbers and output to display in 7-Segment
+; and led
+
+            CONSTANT SWITCH_PORT, 01  ; hex by default
+            CONSTANT LED_PORT,    03
+            CONSTANT 7_SEG_PORT,  02
+
+start:      INPUT s0, SWITCH_PORT     ; Read 8-bit switch data from port 1
+            LOAD  s1, s0    
+
+            LOAD s2, 04               ; for (i = 4; i > 0; i--)
+upper_bits: SR0  s0                   ; get upper 4-bit and store in s0 
+			SUB  s2, 01        
+			JUMP NZ, upper_bits
+			
+			AND s1, 0F                ; get lower 4-bit and store in s1
+			
+			ADD s0, s1                ; s0 = s0 + s1
+			
+			OUTPUT s0, 7_SEG_PORT     ; output result to 7-segment
+			OUTPUT s0, LED_PORT       ; output result to led
+			
+			JUMP start

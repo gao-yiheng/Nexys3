@@ -1,0 +1,26 @@
+; Read input from port 1 which is defined as switch
+; Saturate input up to 13 (n = input)
+; Calculate nth fibonacci number and output to LEDs (port 3)
+
+CONSTANT SWITCH_PORT, 01    ; hex by default
+CONSTANT LED_PORT,    03
+
+start: INPUT s0, SWITCH_PORT    ; Read 8-bit input
+       COMPARE s0, 0D           ; if (n >= 13) 
+	   JUMP C, gen_fib
+	   LOAD s0, 0C              ; n = 12
+	   
+gen_fib: LOAD s1, 00            ; f1 = 0
+         LOAD s2, 01            ; f2 = 1
+		 
+		   ADD s0, 01              ; make compensate		 
+calculate: SUB s0, 01              
+		   JUMP Z, out_result      ; while (n-- > 0)
+		   
+		   LOAD s3, s2            ; temp = f2
+		   ADD s2, s1             ; f2 = f2 + f1
+		   LOAD s1, s3            ; f1 = temp
+		   JUMP calculate
+		   
+out_result: OUTPUT s2, LED_PORT
+            JUMP start

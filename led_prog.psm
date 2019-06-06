@@ -1,0 +1,7 @@
+CONSTANT Acheck, 10100111'b
+CONSTANT LED_PORT, 02
+
+start : INPUT s0, 01
+        LOAD s1, s0
+        OUTPUT s1, LED_PORT
+JUMP start

@@ -17,4 +17,4 @@ led_prog.psm ---> assembly code to implement specific function
 
 ===============================================================================
 
-More information refers to 
+More information refers to https://yg9120.github.io/2019/06/07/Get_Started_With_PicoBlaze/#step-1-prepare-materials-for-your-design

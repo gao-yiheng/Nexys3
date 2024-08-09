@@ -24,4 +24,4 @@ seg7_prog.psm ---> assembly code to implement specific function
 
 ===============================================================================
 
-More information refers to https://yg9120.github.io/2019/06/08/Control_Seven_Segment/
+More information refers to [this page](https://gao-yiheng.github.io/2019/06/08/Control_Seven_Segment/)
